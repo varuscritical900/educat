@@ -3,7 +3,193 @@
 </script>
 
 <template>
-  <main>
-    <h1>Home page</h1>
-  </main>
+<div className="intro container">
+      <div className="i-left">
+      <div className="i-name">
+        <span>The LMS that's</span>
+        <span>built for your needs</span>
+        <span class="fs-5">Experience seamless communication, easy data migration, and user management in one awesome platform</span>
+      </div>
+      <!-- {/* <button className="button i-button">Hire me</button> */} -->
+      <a href="https://drive.google.com/file/d/1uSuUOjLLXvBJCEZx2Z3cVRRPvW3IcS_l/view?usp=share_link" target="_blank" className='btn btn-primary w-50 text-light'>GO TO LMS PORTAL</a>
+      <div className="i-icons">
+      </div>
+
+      </div>
+      
+      <div className='i-right'>
+        <img src="https://firebasestorage.googleapis.com/v0/b/chat1-b013f.appspot.com/o/Vector1.png?alt=media&token=c91ddcb9-7b4c-4d8e-b76b-ff99a7d919e7" alt="" style="opacity: 0.3;"/>
+        <img src="https://firebasestorage.googleapis.com/v0/b/chat1-b013f.appspot.com/o/Vector2.png?alt=media&token=45024c8c-b879-4c81-b1e2-2d6b707382f1" alt="" style="opacity: 0.3;"/>
+        <img src="https://firebasestorage.googleapis.com/v0/b/educat-b9f44.appspot.com/o/hero-banner.png?alt=media&token=aad6325d-04b5-42c8-a90f-d9eeea4c7807" alt="" style="width:350px; height:350; borderRadius: 50"/>
+        
+
+      </div>
+    </div>
 </template>
+
+<style scoped>
+.intro {
+  display: flex;
+  height: 77vh;
+  margin-top: 6rem;
+}
+
+/* left side*/
+.i-left {
+  display: flex;
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem;
+}
+.i-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+  .i-name > :nth-child(1) {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  .i-name > :nth-child(2) {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  .i-name>:nth-child(3) {
+    font-weight: 100;
+    font-size: 14px;
+    color: var(--gray);
+    margin-top: 10px;
+  }
+.i-icons {
+  margin-top: 3rem;
+  display: flex;
+  gap: 0rem;
+}
+.i-icons > * {
+  transform: scale(0.5);
+}
+.i-icons > *:hover {
+  cursor: pointer;
+}
+
+/* right side*/
+.i-right {
+  flex: 1;
+  position: relative;
+}
+  .i-right>*{
+    position: absolute;
+    z-index: 1;
+  }
+  .i-right > :nth-child(1) {
+    transform: scale(0.69);
+    left: -15%;
+    top: -9%;
+  }
+  .i-right > :nth-child(2) {
+    top: -4.6rem;
+    transform: scale(0.67);
+    left: -3rem;
+  }
+  .i-right > :nth-child(3) {
+    transform: scale(1.4);
+    left: 28%;
+  }
+  .i-right > :nth-child(4) {
+    transform: scale(0.62);
+    top: -19%;
+    left: -24%;
+    border-radius: 50%;
+    padding: 0;
+  }
+
+
+@media screen and (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+    gap: 7rem;
+    height: 64rem;
+  }
+  .i-left{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .i-right {
+    transform: scale(0.8);
+    left: -4rem;
+  }
+
+  .i-right > :nth-child(1) {
+    height: 330px;
+}
+
+.i-right > :nth-child(2) {
+  height: 405px;
+}
+.i-right > :nth-child(3) {
+  height: 300px;
+}
+  .i-right .blur {
+    display: none;
+  }
+  .floating-div:nth-of-type(1){
+    top: -7rem !important;;
+  }
+}
+
+@media screen and (min-width: 481px) and  (max-width: 800px){
+  .intro {
+    flex-direction: column;
+    gap: 7rem;
+    height: 64rem;
+  }
+  .i-left{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .i-right {
+    transform: scale(0.8);
+    left: -4rem;
+  }
+
+  .i-right > :nth-child(1) {
+    height: 480px;
+}
+
+.i-right > :nth-child(2) {
+  height: 605px;
+}
+.i-right > :nth-child(3) {
+  height: 300px;
+}
+  .i-right .blur {
+    display: none;
+  }
+  .floating-div:nth-of-type(1){
+    /* display: none; */
+    top: -7rem !important;;
+  }
+}
+
+@media screen and (min-width: 801px) and  (max-width: 1200px){
+
+  .i-right > :nth-child(1) {
+    height: 300px;
+  }
+
+  .i-right > :nth-child(2) {
+    height: 449px;
+  }
+}
+</style>

@@ -37,7 +37,7 @@
   async function submit(){
     await authStore.login(loginData)
       .then(res => {
-        router.replace({name: "user"})
+        router.replace({name: "home"})
       })
       .catch(err => {
         errorMessage.value = err.message

@@ -1,14 +1,14 @@
 <template>
     <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <router-link class="navbar-brand" :to="{name: 'home'}">Navbar</router-link>
+      <router-link class="navbar-brand" :to="{name: 'home'}"><img src="https://firebasestorage.googleapis.com/v0/b/educat-b9f44.appspot.com/o/logo.png?alt=media&token=639801d1-8fa7-4fc4-add1-513ca3a184bb" alt="" class="my-0 img-fluid" style="height: 70px;"></router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#appNavbar" aria-controls="appNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="appNavbar">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link :to="{name: 'home'}" class="nav-link" aria-current="page">Home</router-link>
+            <router-link :to="{name: 'home'}" class="nav-link" aria-current="page"></router-link>
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0">
@@ -22,6 +22,23 @@
               <li><button @click="logout" class="dropdown-item btn btn-danger">Logout</button></li>
             </ul>
           </li>
+          <li v-if="isAuthenticated" class="nav-item">
+            <router-link :to="{name: 'home'}" class="nav-link" aria-current="page">Home</router-link>
+          </li>
+          <li v-if="isAuthenticated" class="nav-item">
+            <router-link :to="{name: 'home'}" class="nav-link" aria-current="page">About Us</router-link>
+          </li>
+          <li v-if="isAuthenticated" class="nav-item">
+            <router-link :to="{name: 'home'}" class="nav-link" aria-current="page">Blogs</router-link>
+          </li>
+          <li v-if="isAuthenticated" class="nav-item">
+            <router-link :to="{name: 'home'}" class="nav-link" aria-current="page">Contact</router-link>
+          </li>
+          <li v-if="isAuthenticated" class="nav-item">
+            <button class="nav-link btn btn-success" aria-current="page">Contact</button>
+          </li>
+          
+          
           <template v-else>
             <li class="nav-item">
               <router-link :to="{name: 'login'}" class="nav-link" aria-current="page">Login</router-link>
